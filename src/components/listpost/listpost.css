@@ -1,0 +1,15 @@
+.listpost {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 6rem; */
+    align-items: center;
+}
+
+.listpost-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}

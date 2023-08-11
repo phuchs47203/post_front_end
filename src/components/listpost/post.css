@@ -1,0 +1,41 @@
+.post {
+    margin: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 400px;
+    width: 300px;
+    background-color: rgb(220, 255, 239);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.post-img {
+    height: 60%;
+    width: 100%;
+
+}
+
+.post-img img {
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.post-content h6 {
+    font-family: var(--font-family);
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.post-content p {
+    font-family: var(--font-family);
+    font-size: 20px;
+}
