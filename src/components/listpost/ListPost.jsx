@@ -22,11 +22,10 @@ const ListPost = () => {
     return (
         <div className='listpost'>
             <div className='listpost-title'>
-                <h1>Discover</h1>
+                <h1 className='gradient__text'>Discover</h1>
             </div>
             <div className='listpost-content'>
                 {posts.map((post) => (
-
                     <Post post={post} key={post.id} />
                 ))}
             </div>

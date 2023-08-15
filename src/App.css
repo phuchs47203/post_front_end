@@ -9,3 +9,10 @@
     padding-top: 0;
     position: relative;
 }
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clop: text;
+    -webkit-text-fill-color: transparent;
+}

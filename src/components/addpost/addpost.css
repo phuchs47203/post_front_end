@@ -65,3 +65,40 @@
 .imgphoto {
     color: rgb(84, 149, 184);
 }
+
+.btn-transition {
+    transition: transform 0.3s ease;
+}
+
+.btn-transition:active {
+    transform: scale(0.9);
+}
+
+.error-message {
+    font-family: var(--font-family);
+    font-size: 12px;
+    margin-left: 1rem;
+    color: rgb(241, 144, 112);
+}
+
+@media screen and (max-width: 520px) {
+    .addpost textarea {
+        width: 320px;
+    }
+
+    .addpost-text {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .addpost textarea {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 230px) {
+    .addpost textarea {
+        width: fit-content;
+    }
+}

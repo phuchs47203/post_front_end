@@ -1,16 +1,17 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
-const Details = ({ imgURL, timeStamp, post }) => {
+const Details = () => {
+    const { post } = useParams();
     return (
         <div className='details' id='details'>
             <div className='details-img'>
-                <img src={imgURL} alt="" />
+                <img src={post.image} alt="" />
             </div>
             <div>
-                <h6>{timeStamp}</h6>
-                <p>{post}</p>
+                <h6>{post.timeStamp}</h6>
+                <p>{post.post}</p>
             </div>
-
         </div>
     )
 }

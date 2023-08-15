@@ -32,12 +32,21 @@ const AddPost = () => {
     const removeImage = () => {
         setimageToPost(null);
     };
+    const [errorMessageLimit, setErrorMessageLimit] = useState('');
+    const LimitCharacters = (e) => {
+        if (inputRef.current.value.length > 800) {
+            setErrorMessageLimit('The content of the post should not be larger than 800 characters');
+        }
+        else {
+            setErrorMessageLimit('');
+        }
+    };
     const handleSubmit = (e) => {
         e.preventDefault();
 
 
         if (!inputRef.current.value) {
-            setErrorMessageText("Text not Empty");
+            setErrorMessageText("Text is not empty");
             return
         }
         setErrorMessageText('');
@@ -83,6 +92,7 @@ const AddPost = () => {
                     placeholder='what is your mind' /> */}
                 <textarea name=""
                     placeholder="What's your mind"
+                    onChange={LimitCharacters}
                     ref={inputRef}
                     id=""
                     cols="" rows="4"></textarea>
@@ -90,6 +100,11 @@ const AddPost = () => {
                     <p
                         className="error-message">
                         {errorMessageText}
+                    </p>}
+                {errorMessageLimit &&
+                    <p
+                        className="error-message">
+                        {errorMessageLimit}
                     </p>}
             </div>
 
@@ -119,6 +134,7 @@ const AddPost = () => {
             </div>
             <div className='addpost-btn'>
                 <button
+                    className='btn-transition'
                     onClick={handleSubmit}
                     type='button'>
                     Submit
